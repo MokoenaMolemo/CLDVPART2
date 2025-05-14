@@ -1,0 +1,49 @@
+﻿@model IEnumerable<EVENTEASEN_5.Models.Venue>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h1>This is the venues page</h1>
+
+<h2>Venues</h2>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.capacity)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.capacity)
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.VenueID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.VenueID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.VenueID })
+        </td>
+    </tr>
+}<img src=" https://www.google.com/imgres?q=cape%20town&imgurl=https%3A%2F%2Fmedia.cntraveller.com%2Fphotos%2F66d724b8446a12744e2568e6%2F1%3A1%2Fw_3648%2Ch_3648%2Cc_limit%2FCape%2520town-GettyImages-671323338.jpg&imgrefurl=https%3A%2F%2Fwww.cntraveller.com%2Fgallery%2Fbest-hotels-cape-town&docid=gcBc4tFKNtA7uM&tbnid=xXPpJ6PTUQzfiM&vet=12ahUKEwjysa2zksmMAxWkgf0HHdO2OrQQM3oECGAQAA..i&w=3648&h=3648&hcb=2&ved=2ahUKEwjysa2zksmMAxWkgf0HHdO2OrQQM3oECGAQAA" alt="Description of picture"
+
+
+</table>
